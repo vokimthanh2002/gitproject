@@ -1,0 +1,32 @@
+.container{
+    background-color: #e07c10;
+    width: 600px;
+}
+.table_line1{
+    padding-top:10px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+.square_black{
+
+    background-color: black;
+;
+}
+.square_white{
+
+    background-color: white;
+
+}
+.sign_row{
+    text-align: right;
+    display: block;
+
+    width: 10px;
+
+}
+.line_final{
+    padding-bottom: 10px;
+}
+th{
+    width: 1px;
+}
