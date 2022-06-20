@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>caculator</h3>
+<input type="text" id="gt1">
+<input type="text" id="gt2"><br><br>
+<button onclick="CONG()"style="background:#764ac7">Cộng</button>
+<button onclick="TRU()"style="background:#de1354">Trừ</button>
+<button onclick="NHAN()"style="background:#78cb04">Nhân</button>
+<button onclick="CHIA()"style="background:#2319c2">Chia</button>
+
+<br><br>
+<span>Result :</span><span id="text_output"></span>
+<script>
+    function CONG() {
+        let a = document.getElementById("gt1").value;
+        let b = document.getElementById("gt2").value;
+        let x = parseInt(a)
+        let y = parseInt(b)
+        let result = x+y;
+        document.getElementById("text_output").innerText = result;
+    }
+
+    function TRU() {
+        let a = document.getElementById("gt1").value;
+        let b = document.getElementById("gt2").value;
+        let x = parseInt(a)
+        let y = parseInt(b)
+        let result = x-y;
+        document.getElementById("text_output").innerText = result;
+    }
+
+    function NHAN() {
+        let a = document.getElementById("gt1").value;
+        let b = document.getElementById("gt2").value;
+        let x = parseInt(a)
+        let y = parseInt(b)
+        let result = x*y;
+        document.getElementById("text_output").innerText = result;
+    }
+
+    function CHIA() {
+        let a = document.getElementById("gt1").value;
+        let b = document.getElementById("gt2").value;
+        let x = parseInt(a)
+        let y = parseInt(b)
+        let result = x/y;
+        document.getElementById("text_output").innerText = result;
+    }
+</script>
+</body>
+</html>

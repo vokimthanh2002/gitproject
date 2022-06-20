@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table cellspacing="10px">
+    <tr>
+        <th>Amount</th>
+        <th>Form Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="input_text">
+        </td>
+        <td>
+            <select id="convert_from">
+                <option value="VND">Viet nam  đồng</option>
+                <option value="USD">Dollar</option>
+            </select>
+        </td>
+        <td>
+            <select id="convert_to">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
+            </select>
+        </td>
+        <td><button onclick="convert_monney()"style="background:#764ac7">Convert</button></td>
+    </tr>
+</table>
+<p>Result : <span id="text_result"></span></p>
+<script>
+    function convert_monney() {
+      let inputText = document.getElementById("input_text").value;
+      let inputSelect_from = document.getElementById("convert_from").value;
+      let inputSelect_to = document.getElementById("convert_to").value;
+      let outputResult = 0;
+        switch (inputSelect_from) {
+            case "VND":
+                if(inputSelect_to == "USD")
+                    outputResult = inputText / 23000;
+                else
+                    outputResult = inputText
+                break;
+            case "USD":
+                if(inputSelect_to == "VND")
+                    outputResult = inputText * 23000;
+                else
+                    outputResult = inputText
+                break;
+
+        }
+        document.getElementById("text_result").innerText = `${inputText} ${inputSelect_from} = ${outputResult} ${inputSelect_to}`
+    }
+</script>
+</body>
+</html>
