@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="giatri">
+    <button type="button" onclick="tinhsongay()" style="background:#2319c2">Tính số ngày</button>
+</form>
+<p id="kq"></p>
+<br> <br>
+<script>
+    function tinhsongay()
+    {
+        let giatri = +document.getElementById("giatri").value;
+        switch(giatri){
+            case 1:
+                document.getElementById("kq").innerText ="tháng 1 có 31 ngày";
+                break;
+            case 2:
+                document.getElementById("kq").innerText ="tháng 2 có 29 hoặc 30 ngày";
+                break;
+            case 3:
+                document.getElementById("kq").innerText ="tháng 3 có 31 ngày";
+                break;
+            case 4:
+                document.getElementById("kq").innerText ="tháng 4 có 30 ngày";
+                break;
+            case 5:
+                document.getElementById("kq").innerText ="tháng 5 có 31 ngày";
+                break;
+            case 6:
+                document.getElementById("kq").innerText ="tháng 6 có 30 ngày";
+                break;
+            case 7:
+                document.getElementById("kq").innerText ="tháng 7 có 31 ngày";
+                break;
+            case 8:
+                document.getElementById("kq").innerText ="tháng 8 có 31 ngày";
+                break;
+            case 9:
+                document.getElementById("kq").innerText ="tháng 9 có 30 ngày";
+                break;
+            case 10:
+                document.getElementById("kq").innerText ="tháng 10có 31 ngày";
+                break;
+            case 11:
+                document.getElementById("kq").innerText ="tháng 11 có 30 ngày";
+                break;
+            case 12:
+                document.getElementById("kq").innerText ="tháng 12 có 31 ngày";
+                break;
+        }
+    }
+</script>
+
+
+</body>
+</html>
