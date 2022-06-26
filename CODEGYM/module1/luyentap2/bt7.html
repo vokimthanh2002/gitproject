@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("nhap a: "));
+    let b = parseInt(prompt("nhap b: "));
+    let c = parseInt(prompt("nhap c: "));
+    let denta = (b * b) - (4 * a * c)
+    if (a == 0){
+        if(b==0){
+            if (c == 0){
+                document.write("ta ca la nghiem cua x");
+            }
+            else {
+                document.write("pt vo nghiem");
+            }
+        }
+        else {
+            document.write("x ="+ (-c/b));
+        }
+    }
+    else if (denta>=0){
+        document.write("x1 = "+ ((-b + Math.sqrt(denta))/ (2*a)));
+        document.write("<br>");
+        document.write("x2 = "+ ((-b + -Math.sqrt(denta))/ (2*a)));
+    }else {
+        document.write("pt vo nghiem");
+    }
+
+
+</script>
+</body>
+</html>

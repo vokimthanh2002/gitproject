@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tien= parseInt(prompt("Nhap so tien: "));
+    let sothang= parseInt(prompt("nhap so thang"));
+    let laixuat;
+
+    if(sothang>6){
+        laixuat=tien*5/100;
+        document.write("lai xuat cua ban la "+laixuat)
+    }else if (sothang>12){
+        laixuat=tien*10/100;
+        document.write("lai xuat cua ban la "+laixuat)
+    }else if (sothang>24){
+        laixuat=tien*20/100;
+        document.write("lai xuat cua ban la "+laixuat)
+    }else {
+        document.write("chua du dieu kien")
+    }
+
+</script>
+</body>
+</html>

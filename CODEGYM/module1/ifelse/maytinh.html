@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<fieldset style="border: 2px solid #ffdd00;border-radius: 6px;width: 410px ;background-color: rgba(106,124,199,0.84);margin: auto" ; >
+    <table >
+        <tr >
+            <td colspan="4"><input type="text" id="input_number" style="width: 410px;height: 60px;border: 3px solid lightgrey;border-radius: 4px;font-size: 20px"></td>
+        </tr>
+        <tr>
+            <td><button class="so" value="1" onclick="getNumber('1')">1</button></td>
+            <td><button class="so" value="2" onclick="getNumber('2')">2</button></td>
+            <td><button class="so" value="3"onclick="getNumber('3')">3</button></td>
+            <td><button class="so" value="+"onclick="getNumber('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button class="so" value="4"onclick="getNumber('4')">4</button></td>
+            <td><button class="so"value="5"onclick="getNumber('5')">5</button></td>
+            <td><button class="so"value="6"onclick="getNumber('6')">6</button></td>
+            <td><button class="so"value="-"onclick="getNumber('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button class="so"value="7"onclick="getNumber('7')">7</button></td>
+            <td><button class="so"value="8"onclick="getNumber('8')">8</button></td>
+            <td><button class="so"value="9"onclick="getNumber('9')">9</button></td>
+            <td><button class="so"value="*"onclick="getNumber('*')">x</button></td>
+        </tr>
+        <tr>
+            <td><button class="so"value="C"onclick="Clear()">C</button></td>
+            <td><button class="so"value="0"onclick="getNumber('0')">0</button></td>
+            <td><button class="so"value="="onclick="solve()">=</button></td>
+            <td><button class="so"value="/"onclick="getNumber('/')">/</button></td>
+        </tr>
+    </table>
+</fieldset>
+<style>
+    .number{
+
+        width: 70px;
+        height: 70px;
+        color: yellow;
+        background-color: #1a36c6;
+        font-size: 25px;
+        font-weight: 800;
+        margin: 10px 10px 10px 10px;
+        border: 2px solid red;
+        border-radius: 3px;
+    }
+
+</style>
+<script>
+    function getNumber(number) {
+
+        let inputNumber = document.getElementById("input_number");
+        inputNumber.value += number;
+
+    }
+    function solve() {
+        let x = document.getElementById("input_number").value;
+        document.getElementById("input_number").value = eval(x);
+
+    }
+    function Clear() {
+        document.getElementById("input_number").value ="";
+    }
+
+</script>
+</body>
+</html>
