@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = parseInt(prompt("nhap so :"));
+    let n;
+    let count = 0;
+    if (numbers <2)
+        alert("đây không là số nguyên tố ");
+    else
+    {
+        for (n=2;n<=numbers;n++)
+        {
+            if (numbers%n==0)
+            count ++;
+        }
+        if ( count  == 1)
+            alert("đây là số nguyên tố ");
+        else
+            alert("đây không là số nguyên tố ");
+    }
+</script>
+</body>
+</html>
