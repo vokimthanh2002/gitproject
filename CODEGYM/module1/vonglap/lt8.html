@@ -2,7 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-bb
+</head>
+<body>
+<body>
+<button onclick="play()" style="text-align: center;background: #de1354">choi</button>
+<script>
+    function play()
+    {
+        let sod=prompt("nhap so dau");
+        let soc=prompt("nhap so cuoi");
+        let a = Math.floor(Math.random() * 100000);
+        while(true)
+        {
+            if(soc<a)
+            {
+                alert("so lon hon du doan !!!");
+                let sod=prompt("nhap so dau");
+                let soc=prompt("nhap so cuoi");
+            }
+            else if(sod>a)
+            {
+                alert("so be hon du doan !!!");
+                let sod=prompt("nhap so dau");
+                let soc=prompt("nhap so cuoi");
+            }
+            else
+                alert("chuc mung ban da doan trung !!!");
+                break;
+            }
+    }
+</script>
 
+</body>
 </body>
 </html>
