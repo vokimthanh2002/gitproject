@@ -4,35 +4,39 @@
     <meta charset="UTF-8">
 </head>
 <body>
-<body>
 <button onclick="play()" style="text-align: center;background: #de1354">choi</button>
 <script>
     function play()
     {
-        let sod=prompt("nhap so dau");
-        let soc=prompt("nhap so cuoi");
-        let a = Math.floor(Math.random() * 100000);
-        while(true)
-        {
-            if(soc<a)
+        let min=parseInt(prompt("nhap so dau"));
+        let max=parseInt(prompt("nhap so cuoi"));
+        let a = Math.floor(Math.random() * (max-min)+1)+min;
+        let so=parseInt(prompt("nhap so du doan"));
+        let k=0;
+        while(true) {
+            if(k==3){
+                alert("da het luot choi");
+                break;
+            }
+            if(so>a)
             {
                 alert("so lon hon du doan !!!");
-                let sod=prompt("nhap so dau");
-                let soc=prompt("nhap so cuoi");
+                so=prompt("nhap so du doan");
+                k++;
             }
-            else if(sod>a)
+            else if(so<a)
             {
                 alert("so be hon du doan !!!");
-                let sod=prompt("nhap so dau");
-                let soc=prompt("nhap so cuoi");
+                so=prompt("nhap so du doan");
+                k++;
             }
-            else
+            else {
                 alert("chuc mung ban da doan trung !!!");
                 break;
+              }
             }
     }
 </script>
 
-</body>
 </body>
 </html>

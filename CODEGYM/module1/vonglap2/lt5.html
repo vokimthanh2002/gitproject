@@ -5,17 +5,29 @@
     <title>Title</title>
 </head>
 <body>
-<p> cong thuc:  A=P*(1+r)^(n/12)</p>
 <script>
-
-        let p= prompt("nhap so tien  ban  dau");
-        let r= prompt("nhap lai xuat");
-        let n= prompt("nhap so thang");
-        let A;
-        for(let i=1;i<=n;i++) {
-            A=p*(1+r)^(n/12);
-        }
-        document.write(""+ A);
+    // c1
+    let tien=parseFloat(prompt("Nhap vao tien gui ban dau"));
+    let month=parseFloat(prompt("Nhap vao so thang can gui:"));
+    let interest=parseFloat(prompt("Nhap vao lai suat:"));
+    let tt;
+    let money=tien;
+    let lai;
+    for(let i=1; i<=month;i++){
+        tt=money+money*interest;
+        money=tt;
+    }
+    lai=parseFloat(tt)-parseFloat(tien);
+    document.write("tong tien  lai"+  month+"  thang la:" + lai);
+    // c2
+    // let money=parseFloat(prompt("Nhap vao tien gui ban dau"));
+    // let month=parseFloat(prompt("Nhap vao so thang can gui:"));
+    // let interest=parseFloat(prompt("Nhap vao lai suat:"));
+    // let tt= money*Math.pow(1+interest,month);
+    // let tienlai=tt-money;
+    // document.write("tien lai  la:"+ tienlai);
 </script>
 </body>
 </html>
+
+
