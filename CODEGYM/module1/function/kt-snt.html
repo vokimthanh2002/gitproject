@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function CheckSNT(so) {
+        let d=0;
+        if(so<2)
+        {
+            document.write(so+" khong phai so nt");
+        }
+        else
+        {
+            for(let i=1;i<=so;i++)
+            {
+                if(so%i==0)
+                {
+                    d++;
+                }
+            }
+            if(d==2)
+            {
+                document.write(so+" la so nguyen to ");
+            }
+            else
+            {
+                document.write(so+" khong la nguyen to ");
+            }
+        }
+
+
+    }
+    CheckSNT(11)
+</script>
+</body>
+</html>
