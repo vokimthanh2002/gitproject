@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=[];
+    let b=[];
+    let d=0;
+    for(let i=0;i<=5;i++)
+        a[i]=+prompt("nhap so thu "+i+":");
+    for(let i=0;i<=5;i++)
+        b[i]=+prompt("nhap so thu "+i+":");
+    document.write(a.toString())
+    document.write("<br>");
+    document.write(b.toString())
+    document.write("<br>");
+    if(a.length!=b.length)
+    {
+        document.write("hai mang khac nhau");
+    }
+    else
+    {
+        for(let i=0;i<a.length;i++)
+        {
+            if(a[i]==b[i])
+            {
+                d++;
+            }
+        }
+        if(d==a.length){
+            document.write("hai mang giong nhau ");
+        }
+        else
+            document.write("hai mang khac nhau ");
+    }
+</script>
+</body>
+</html>

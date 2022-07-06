@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhap tu</label>
+<input type="text" id="txtValue">
+<input type="button" value="Dich" id="btndich" onclick="dich()">
+<div id="result"></div>
+<script>
+    function dich()
+    {
+        let  m1= ["banana","chicken","cat","dog","pig","ghost","Devil"];
+        let  m2= ["củ chuối"," con gà","con mèo","con chó","con heo","con ma","con quỷ"];
+        let value=document.getElementById("txtValue").value;
+        let tg;
+        let result;
+        for(let i=1;i<m1.length;i++) {
+            if (value == m1[i]) {
+                tg = i;
+                for (let j = 1; j < m2.length; j++) {
+                    if (tg == j) {
+                        result = m2[j];
+                    }
+                }
+            }
+        }
+        document.getElementById("result").innerHTML=result;
+    }
+</script>
+
+
+
+</body>
+</html>

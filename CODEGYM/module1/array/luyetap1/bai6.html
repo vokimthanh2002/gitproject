@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a= [];
+    for(let i=0;i<10;i++)
+    {
+        a[i]=+prompt("nhap phan  tu  thu "+i+" :");
+    }
+    let so= +prompt("nhap so can tim :");
+    if(a.indexOf(so)!=-1)
+    {
+        document.write(so+"  co trong mang");
+    }
+    else
+        document.write(so+"  khong  co trong mang ");
+</script>
+</body>
+</html>

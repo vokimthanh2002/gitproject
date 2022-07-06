@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let  a=  [];
+    let  b=  [];
+    let  c=  [];
+    for(let i=0;i<10;i++)
+        a[i]=+prompt("nhap phan  tu  thu "+i+" cua mang a: ");
+    for(let j=0;j<10;j++)
+        b[j]=+prompt("nhap phan  tu  thu "+j+" cua mang b: ");
+    document.write("mang a: "+a.toString());
+    document.write("<br>");
+    document.write("mang b: "+b.toString());
+    document.write("<br>");
+    c=a.concat(b);
+    document.write("mang c: "+c.toString())
+</script>
+</body>
+</html>
