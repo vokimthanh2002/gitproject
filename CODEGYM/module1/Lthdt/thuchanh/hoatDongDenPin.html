@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Xây dựng lớp mô phỏng sự hoạt động của đèn pin</title>
+</head>
+<body>
+<script>
+
+
+    var  Battery = function (energy) {
+        this.energy = energy;
+
+        this.setEnergy  = function (energy_) {
+            this.Energy = energy_;
+        }
+        this.getEnergy= function () {
+            return this.energy;
+        }
+        this.decreaseEnergy = function () {
+            this.energy = this.energy --;
+        }
+
+    }
+
+    var  FlashLamp = function (status, battery) {
+        this.status = false;
+        this.battery = null;
+
+        this.setbattery = function (battery_) {
+            this.battery = battery_;
+        }
+
+        this.getbattery  = function () {
+            return this.battery;
+        }
+
+        this.turnOn = function () {
+            if (this.battery.getEnergy() > 0){
+                this.status = true;
+                this.light();
+                this.battery.decreaseEnergy();
+
+            }else {
+                alert(" HET PIN ROI")
+            }
+        }
+
+
+        this.turnOff = function () {
+            this.status = false;
+            alert(" TAT DEN ")
+
+        }
+        this.light  = function () {
+            if(this.status){
+                alert( " DEN SANG")
+            }
+        }
+    }
+
+
+    var  battery1 = new Battery(0);
+    var  flashLamp = new FlashLamp();
+
+    flashLamp.setbattery(battery1);
+
+    function main(){
+        flashLamp.turnOn();
+    }
+
+    function main2 (){
+        flashLamp.turnOff();
+    }
+
+
+
+</script>
+
+<button type="button" onclick=" main()" style="
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> BAT DEN</button>
+<button type="button" onclick=" main2()" style="
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> TAT DEN</button>
+
+
+</body>
+</html>

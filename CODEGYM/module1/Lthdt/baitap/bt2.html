@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Temperature =  function (c) {
+        this.c=c;
+     this.getToCFromF= function () {
+         return  9/5*c+32;
+     }
+     this.getToCFromK=function () {
+        return  parseInt(c)+273.15;
+     }
+     this.setC=  function (c) {
+        this.c=c;
+     }
+    };
+    let  C=prompt("Nhap  nhiet do:");
+   while(true)
+   {
+       if(C<-273)
+       {
+           alert("Nhiet do  khong duoc be hon -273 yeu cau nhap  lai!!");
+           C=prompt("Nhap  nhiet do:");
+       }
+       else
+       {
+           let temperature= new  Temperature(C);
+           let F= temperature.getToCFromF();
+           let K= temperature.getToCFromK();
+           alert(C+"°C= "+F+"°F="+K+"°K");
+           break;
+       }
+   }
+</script>
+</body>
+</html>

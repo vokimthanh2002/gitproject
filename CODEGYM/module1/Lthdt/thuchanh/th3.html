@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hinh Tron</title>
+</head>
+<body>
+<canvas id="canvas" width="1500"  height="1000" style="border: 1px solid red"></canvas>
+</body>
+<script>
+
+    //ve hinh tron voi ban kinh xac dinh
+    function taoHinhTron() {
+        let  ctx=document.getElementById("canvas").getContext("2d");
+        let ht= new hinhTron(400,350,80);
+        ctx.beginPath();
+        ctx.arc(ht.x,ht.y,ht.r,0,2*Math.PI);
+        ctx.fill();
+    }
+// taoHinhTron();
+    // ve hinh tron voi bban kinh ngau nhien
+    function randomBk() {
+        let ctx=document.getElementById("canvas").getContext("2d");
+        let r=Math.floor(Math.random()*80);
+        let ht=  new hinhTron(400,350,r);
+        ctx.beginPath();
+        ctx.arc(ht.x,ht.y,ht.r,0,2*Math.PI);
+        ctx.fill();
+    }
+    randomBk();
+function hinhTron(x,y,r) {
+    this.x= x;
+    this.y=y;
+    this.r=r;
+}
+    function getRanDomHex() {
+        return  Math.floor(Math.random()*255)
+    }
+    function getRanDomColor() {
+        let red= getRanDomHex();
+        let green=getRanDomHex();
+        let blue=getRanDomHex();
+        return "rgb(" + red + "," + blue + "," + green +")";
+    }
+    function htrandomcolor() {
+        let ctx= document.getElementById("canvas").getContext("2d");
+        let r=Math.floor(Math.random()*80);
+        let x = Math.random() * window.innerWidth;
+        let y = Math.random() * window.innerHeight;
+        let color=getRanDomColor();
+        let ht=new hinhTron(x,y,r);
+        ctx.beginPath();
+        ctx.arc(ht.x,ht.y,ht.r,0,2*Math.PI);
+        ctx.fillStyle = color;
+        ctx.fill();
+    }
+function createMultipleCircle(){
+    for(let i = 0;i<100000; i++){
+        htrandomcolor()
+    }
+}
+createMultipleCircle();
+
+
+
+
+
+
+</script>
+</html>
