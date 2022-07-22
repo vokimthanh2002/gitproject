@@ -11,8 +11,8 @@
 
         this.weight = weight;
 
-        this.setweight  = function (wegith_) {
-            this.weight = wegith_;
+        this.setweight  = function (weigth) {
+            this.weight = weigth;
         };
 
         this.getweight = function () {
@@ -50,9 +50,9 @@
                 this.weightapple.decrease();
                 this.weightHuman = this.weightHuman += 1;
 
-                document.write(" Sau khi an mot mieng tao la  can nang cua ban la   : " + this.weightHuman  +  " So tao con lai la : " + this.weightapple.getweight());
+                alert(" Sau khi an mot mieng tao la  can nang cua ban la   : " + this.weightHuman  +  " So tao con lai la : " + this.weightapple.getweight());
             } else {
-                document.write(" Oi khong! ban chua an mieng tao nao ! An tao di de hien can nag  nhe . ");
+                alert(" Oi khong! ban an het tao roi hen ban nam sau nhe . ");
             }
         };
 
@@ -63,7 +63,7 @@
     // nhap ten
 
 
-    var  apple =  new Apple(100);
+    var  apple =  new Apple(10);
     var  human = new Human(2, 2, 2, 2);
 
     human.getweightapple(apple);
@@ -85,7 +85,6 @@
     border-radius: 4px;">
     CAU TRUYEN ADAM
 </button>
-
 <button type="button" onclick="eat()" style="background-color: #4CAF50;
     color: white;
     padding: 12px 20px;

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Person
+    {
+   constructor(fistName,lastName,tuoi,gt,sothich,toc)
+    {
+        this.fistName= fistName;
+        this.lastName= lastName;
+        this.tuoi=  tuoi;
+        this.gt=gt;
+        this.sothich=sothich;
+        this.toc=toc;
+    }
+    getHoVaTen()
+    {
+        return this.fistName+ " "+this.lastName
+    }
+    getSoTuoi()
+    {
+        return this.tuoi;
+    }
+    getAll()
+    {
+        return "Ho "+this.fistName +" Ten "+this.lastName+" tuoi: "+this.tuoi+
+                " gt "+this.gt+" so  thich "+ this.sothich+ " toc "+ this.toc;
+    }
+    }
+    let person1= new Person("Vo","Kim Thanh",21,"Nam","Yeeu  bonng  da","den");
+    let  a=  person1.getHoVaTen();
+    document.write(a)
+
+    let b=person1.getSoTuoi();
+    document.write(b)
+
+    let c=person1.getAll();
+    document.write(c)
+</script>
+</form>
+</body>
+</html>

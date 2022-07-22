@@ -5,52 +5,57 @@
     <title>Title</title>
 </head>
 <body>
-<script>
-    var SwitchButton = function () {
-        this.status = false;
-        this.lamp = null;
-        this.connectToLamp = function () {
-            if (this.status == true) {
-                alert("Connected!!!");
-            } else {
-                alert("Not Connected!!!");
-            }
-        };
-        this.switchOn = function () {
-            this.status = true;
-            alert("Switched On <3");
-        };
-        this.switchOff = function () {
-            this.status = false;
-            alert("Switched Off");
-        }
-    };
-    var ElectricLamp = function () {
-        this.statuss = false;
-        this.turnOns = function () {
-            this.statuss = true;
-            alert("Light Bulb Turned On <3");
-        };
-        this.turnOffs = function () {
-            this.statuss = false;
-            alert("Light Bulb Off");
-        }
-    };
-    var congtac = new SwitchButton();
-    var bongden = new ElectricLamp();
-    bongden(congtac);
-    function on() {
-        bongden.turnOns(congtac.switchOn());
-    }
-    function off() {
-        bongden.turnOffs(congtac.switchOff());
-    }
-    function connection() {
-        congtac.connectToLamp();
-    }
-</script>
-<button type="button" onclick="on()">BAT DEN</button>
-<button type="button" onclick="off()">TAT DEN</button>
-<button type="button" onclick="connection()">CONNECTION</button>
+<div style="text-align: center">
+    <h1>BAT TAT BONG DEN</h1>
+    <img src="off.png"id="lamp">
+    <br>
+    <input type="button" value="TurnOnOrOff" onclick="bt()">
+    <p id="text"></p>
+</div>
 </body>
+<script>
+    class CongTac
+    {
+        constructor(status) {
+            this.status= status;
+        }
+        TurnOnOrOffSwitch()
+        {
+            if(this.status)
+            {
+                this.status=false;
+            }else
+            {
+                this.status= true;
+            }
+        }
+    }
+    class BongDen
+    {
+        constructor(congtac) {
+            this.congtac= congtac;
+        }
+        TurnOnOrOffLight()
+        {
+            if(this.congtac.status)
+            {
+                document.getElementById("lamp").src="on.png";
+                document.getElementById("text").innerText="Bong den da bat";
+            }
+            else
+            {
+                document.getElementById("lamp").src="off.png";
+                document.getElementById("text").innerText="Bong den da tat";
+            }
+        }
+
+    }
+    let congTac1= new CongTac(false);
+    let bongDen1= new BongDen(congTac1);
+    function bt() {
+        congTac1.TurnOnOrOffSwitch();
+        bongDen1.TurnOnOrOffLight();
+    }
+
+</script>
 </html>

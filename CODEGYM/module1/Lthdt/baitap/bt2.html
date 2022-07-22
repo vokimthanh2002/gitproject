@@ -6,18 +6,20 @@
 </head>
 <body>
 <script>
-    let Temperature =  function (c) {
-        this.c=c;
-     this.getToCFromF= function () {
-         return  9/5*c+32;
-     }
-     this.getToCFromK=function () {
-        return  parseInt(c)+273.15;
-     }
-     this.setC=  function (c) {
-        this.c=c;
-     }
-    };
+    class Temperature{
+        constructor(c) {
+            this.c=c;
+        }
+        getFromCToF()
+        {
+            return  9/5*this.c+32;
+        }
+        getFromCToK()
+        {
+            return  parseInt(this.c)+273.15;
+        }
+    }
+
     let  C=prompt("Nhap  nhiet do:");
    while(true)
    {
@@ -26,11 +28,16 @@
            alert("Nhiet do  khong duoc be hon -273 yeu cau nhap  lai!!");
            C=prompt("Nhap  nhiet do:");
        }
+       else if(C!=+(C))
+       {
+           alert("Khong  xac dinh yeu cau nhap  lai!!");
+           C=prompt("Nhap  nhiet do:");
+       }
        else
        {
            let temperature= new  Temperature(C);
-           let F= temperature.getToCFromF();
-           let K= temperature.getToCFromK();
+           let F= temperature.getFromCToF();
+           let K= temperature.getFromCToK();
            alert(C+"°C= "+F+"°F="+K+"°K");
            break;
        }
